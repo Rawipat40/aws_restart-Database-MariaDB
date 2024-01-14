@@ -1,8 +1,17 @@
-Description: Hand-on MariaDB to understand Database structure and Database syntax 
+## Description: 
 
-Technologies Used: -AWS EC2 -MariaDB
+Hand-on MariaDB to understand Database structure and Database syntax 
 
-What I Learned: This Hand-on MariaDB allowed me to enhance my skills in Database.
+## Technologies Used: 
+
+  -  AWS EC2
+  -  MariaDB
+
+## What I Learned: 
+
+This Hand-on MariaDB allowed me to enhance my skills in Database.
+
+##
 
 ![MariaDB1](https://github.com/Rawipat40/aws_restart-Database-MariaDB/assets/141838218/f5a4b167-50bc-4ce5-b0f9-ee9879a8babb)
 
