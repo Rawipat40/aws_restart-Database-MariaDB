@@ -1,15 +1,98 @@
-## Description: 
+# AWS EC2 and MariaDB Setup and Usage
 
-Hand-on MariaDB to understand Database structure and Database syntax 
+This guide provides an overview of setting up and using AWS EC2 (Elastic Compute Cloud) instances with MariaDB, along with insights into performing various database operations.
 
-## Technologies Used: 
+## Prerequisites
 
-  -  AWS EC2
-  -  MariaDB
+- Access to an AWS account
+- Basic understanding of AWS EC2 and MariaDB concepts
+- Familiarity with the Linux command line
 
-## What I Learned: 
+## Setup
 
-This Hand-on MariaDB allowed me to enhance my skills in Database.
+1. **Launch an AWS EC2 Instance:**
+
+    Launch a new EC2 instance with your desired specifications, such as instance type, operating system (e.g., Amazon Linux), and security group settings.
+
+2. **Install and Configure MariaDB:**
+
+    Connect to your EC2 instance via SSH and install MariaDB using the package manager appropriate for your Linux distribution (e.g., `yum` for Amazon Linux).
+
+## Usage
+
+1. **Create a Database and Tables:**
+
+    Use the MySQL client (`mysql`) to connect to the MariaDB server and create databases and tables as needed. For example:
+
+    ```sql
+    CREATE DATABASE my_database;
+    USE my_database;
+
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL,
+        email VARCHAR(100) NOT NULL
+    );
+    ```
+
+2. **Update Data:**
+
+    Modify existing data in the tables using the `UPDATE` statement. For example:
+
+    ```sql
+    UPDATE users SET email='new_email@example.com' WHERE id=1;
+    ```
+
+3. **Delete Data:**
+
+    Remove records from tables using the `DELETE` statement. For example:
+
+    ```sql
+    DELETE FROM users WHERE id=1;
+    ```
+
+4. **Query Tables:**
+
+    Retrieve data from tables using the `SELECT` statement. For example:
+
+    ```sql
+    SELECT * FROM users;
+    ```
+
+5. **Inner Join Tables:**
+
+    Perform inner joins between tables to retrieve related data. For example:
+
+    ```sql
+    SELECT users.username, orders.order_id
+    FROM users
+    INNER JOIN orders ON users.id = orders.user_id;
+    ```
+
+## What I Have Learned
+
+Through setting up and using AWS EC2 with MariaDB, I have learned the following:
+
+- **EC2 Instance Management:**
+  - Provisioning and configuring EC2 instances, including security group settings and instance types.
+
+- **MariaDB Installation and Configuration:**
+  - Configuring remote access to MariaDB.
+
+- **Database Operations:**
+  - Creating databases and tables using SQL commands.
+  - Updating, deleting, and querying data in MariaDB tables.
+  - Performing inner joins to retrieve data from related tables.
+
+- **Remote Server Administration:**
+  - Managing an EC2 instance remotely via SSH.
+  - Executing SQL commands and managing databases using the MySQL client.
+
+## Conclusion
+
+By leveraging AWS EC2 instances with MariaDB, you can create scalable and flexible database solutions in the cloud. Understanding the setup and usage of these technologies, along with database operations, provides valuable insights into cloud-based database management and administration.
+
+For more advanced configurations and optimizations, refer to the AWS and MariaDB documentation, and explore additional features and services available in the AWS ecosystem.
 
 ##
 
